@@ -7,15 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B275BAA61C1ECA900079FA93 /* AddToDoItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B275BAA51C1ECA900079FA93 /* AddToDoItemViewController.m */; };
+		B275BAA91C1ECADE0079FA93 /* ToDoListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B275BAA81C1ECADE0079FA93 /* ToDoListTableViewController.m */; };
+		B275BAAC1C1ECB690079FA93 /* ToDoItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B275BAAB1C1ECB690079FA93 /* ToDoItem.m */; };
 		B2F302FE1C1E96B9007001B8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B2F302FD1C1E96B9007001B8 /* main.m */; };
 		B2F303011C1E96B9007001B8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B2F303001C1E96B9007001B8 /* AppDelegate.m */; };
 		B2F303041C1E96B9007001B8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2F303031C1E96B9007001B8 /* ViewController.m */; };
 		B2F303071C1E96B9007001B8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2F303051C1E96B9007001B8 /* Main.storyboard */; };
 		B2F303091C1E96B9007001B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2F303081C1E96B9007001B8 /* Assets.xcassets */; };
 		B2F3030C1C1E96B9007001B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2F3030A1C1E96B9007001B8 /* LaunchScreen.storyboard */; };
+		B2F303191C1E9D32007001B8 /* Icon-iOS7@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B2F303141C1E9D32007001B8 /* Icon-iOS7@2x.png */; };
+		B2F3031A1C1E9D32007001B8 /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = B2F303151C1E9D32007001B8 /* Icon-Small.png */; };
+		B2F3031B1C1E9D32007001B8 /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B2F303161C1E9D32007001B8 /* Icon-Small@2x.png */; };
+		B2F3031C1C1E9D32007001B8 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B2F303171C1E9D32007001B8 /* Icon.png */; };
+		B2F3031D1C1E9D32007001B8 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B2F303181C1E9D32007001B8 /* Icon@2x.png */; };
+		B2F3031F1C1E9DF7007001B8 /* bac.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B2F3031E1C1E9DF7007001B8 /* bac.jpg */; };
+		B2F303211C1EA057007001B8 /* text.png in Resources */ = {isa = PBXBuildFile; fileRef = B2F303201C1EA057007001B8 /* text.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B275BAA41C1ECA900079FA93 /* AddToDoItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddToDoItemViewController.h; sourceTree = "<group>"; };
+		B275BAA51C1ECA900079FA93 /* AddToDoItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddToDoItemViewController.m; sourceTree = "<group>"; };
+		B275BAA71C1ECADE0079FA93 /* ToDoListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToDoListTableViewController.h; sourceTree = "<group>"; };
+		B275BAA81C1ECADE0079FA93 /* ToDoListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToDoListTableViewController.m; sourceTree = "<group>"; };
+		B275BAAA1C1ECB690079FA93 /* ToDoItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToDoItem.h; sourceTree = "<group>"; };
+		B275BAAB1C1ECB690079FA93 /* ToDoItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToDoItem.m; sourceTree = "<group>"; };
 		B2F302F91C1E96B9007001B8 /* What To Do.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "What To Do.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2F302FD1C1E96B9007001B8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B2F302FF1C1E96B9007001B8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -26,6 +42,13 @@
 		B2F303081C1E96B9007001B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B2F3030B1C1E96B9007001B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B2F3030D1C1E96B9007001B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B2F303141C1E9D32007001B8 /* Icon-iOS7@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-iOS7@2x.png"; path = "Images/Icon-iOS7@2x.png"; sourceTree = "<group>"; };
+		B2F303151C1E9D32007001B8 /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small.png"; path = "Images/Icon-Small.png"; sourceTree = "<group>"; };
+		B2F303161C1E9D32007001B8 /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small@2x.png"; path = "Images/Icon-Small@2x.png"; sourceTree = "<group>"; };
+		B2F303171C1E9D32007001B8 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = Images/Icon.png; sourceTree = "<group>"; };
+		B2F303181C1E9D32007001B8 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "Images/Icon@2x.png"; sourceTree = "<group>"; };
+		B2F3031E1C1E9DF7007001B8 /* bac.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = bac.jpg; path = ../../Assets/bac.jpg; sourceTree = "<group>"; };
+		B2F303201C1EA057007001B8 /* text.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = text.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +81,7 @@
 		B2F302FB1C1E96B9007001B8 /* What To Do */ = {
 			isa = PBXGroup;
 			children = (
+				B2F303131C1E9D24007001B8 /* Images */,
 				B2F302FF1C1E96B9007001B8 /* AppDelegate.h */,
 				B2F303001C1E96B9007001B8 /* AppDelegate.m */,
 				B2F303021C1E96B9007001B8 /* ViewController.h */,
@@ -67,6 +91,12 @@
 				B2F3030A1C1E96B9007001B8 /* LaunchScreen.storyboard */,
 				B2F3030D1C1E96B9007001B8 /* Info.plist */,
 				B2F302FC1C1E96B9007001B8 /* Supporting Files */,
+				B275BAA41C1ECA900079FA93 /* AddToDoItemViewController.h */,
+				B275BAA51C1ECA900079FA93 /* AddToDoItemViewController.m */,
+				B275BAA71C1ECADE0079FA93 /* ToDoListTableViewController.h */,
+				B275BAA81C1ECADE0079FA93 /* ToDoListTableViewController.m */,
+				B275BAAA1C1ECB690079FA93 /* ToDoItem.h */,
+				B275BAAB1C1ECB690079FA93 /* ToDoItem.m */,
 			);
 			path = "What To Do";
 			sourceTree = "<group>";
@@ -77,6 +107,20 @@
 				B2F302FD1C1E96B9007001B8 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B2F303131C1E9D24007001B8 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				B2F303201C1EA057007001B8 /* text.png */,
+				B2F3031E1C1E9DF7007001B8 /* bac.jpg */,
+				B2F303141C1E9D32007001B8 /* Icon-iOS7@2x.png */,
+				B2F303151C1E9D32007001B8 /* Icon-Small.png */,
+				B2F303161C1E9D32007001B8 /* Icon-Small@2x.png */,
+				B2F303171C1E9D32007001B8 /* Icon.png */,
+				B2F303181C1E9D32007001B8 /* Icon@2x.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +182,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				B2F3030C1C1E96B9007001B8 /* LaunchScreen.storyboard in Resources */,
+				B2F3031D1C1E9D32007001B8 /* Icon@2x.png in Resources */,
+				B2F303191C1E9D32007001B8 /* Icon-iOS7@2x.png in Resources */,
+				B2F3031F1C1E9DF7007001B8 /* bac.jpg in Resources */,
 				B2F303091C1E96B9007001B8 /* Assets.xcassets in Resources */,
+				B2F3031B1C1E9D32007001B8 /* Icon-Small@2x.png in Resources */,
+				B2F303211C1EA057007001B8 /* text.png in Resources */,
+				B2F3031A1C1E9D32007001B8 /* Icon-Small.png in Resources */,
+				B2F3031C1C1E9D32007001B8 /* Icon.png in Resources */,
 				B2F303071C1E96B9007001B8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -150,9 +201,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B275BAAC1C1ECB690079FA93 /* ToDoItem.m in Sources */,
 				B2F303041C1E96B9007001B8 /* ViewController.m in Sources */,
 				B2F303011C1E96B9007001B8 /* AppDelegate.m in Sources */,
 				B2F302FE1C1E96B9007001B8 /* main.m in Sources */,
+				B275BAA91C1ECADE0079FA93 /* ToDoListTableViewController.m in Sources */,
+				B275BAA61C1ECA900079FA93 /* AddToDoItemViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,6 +318,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				INFOPLIST_FILE = "What To Do/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.columbus.What-To-Do";
@@ -275,6 +330,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				INFOPLIST_FILE = "What To Do/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.columbus.What-To-Do";
@@ -301,6 +357,7 @@
 				B2F303121C1E96B9007001B8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
