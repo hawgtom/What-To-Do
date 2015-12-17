@@ -10,6 +10,13 @@
 		B275BAA61C1ECA900079FA93 /* AddToDoItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B275BAA51C1ECA900079FA93 /* AddToDoItemViewController.m */; };
 		B275BAA91C1ECADE0079FA93 /* ToDoListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B275BAA81C1ECADE0079FA93 /* ToDoListTableViewController.m */; };
 		B275BAAC1C1ECB690079FA93 /* ToDoItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B275BAAB1C1ECB690079FA93 /* ToDoItem.m */; };
+		B275BAB11C2162A40079FA93 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B275BAB01C2162A40079FA93 /* libsqlite3.tbd */; };
+		B275BAB81C227C430079FA93 /* DBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B275BAB61C227C430079FA93 /* DBManager.m */; };
+		B275BAB91C227C430079FA93 /* sampledb.sql in Resources */ = {isa = PBXBuildFile; fileRef = B275BAB71C227C430079FA93 /* sampledb.sql */; };
+		B275BABB1C22A3000079FA93 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B275BABA1C22A3000079FA93 /* CoreGraphics.framework */; };
+		B275BABD1C22A3060079FA93 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B275BABC1C22A3060079FA93 /* UIKit.framework */; };
+		B275BABF1C22A30E0079FA93 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B275BABE1C22A30E0079FA93 /* Foundation.framework */; };
+		B275BAC11C22A3230079FA93 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B275BAC01C22A3230079FA93 /* libsqlite3.dylib */; };
 		B2F302FE1C1E96B9007001B8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B2F302FD1C1E96B9007001B8 /* main.m */; };
 		B2F303011C1E96B9007001B8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B2F303001C1E96B9007001B8 /* AppDelegate.m */; };
 		B2F303041C1E96B9007001B8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2F303031C1E96B9007001B8 /* ViewController.m */; };
@@ -32,6 +39,14 @@
 		B275BAA81C1ECADE0079FA93 /* ToDoListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToDoListTableViewController.m; sourceTree = "<group>"; };
 		B275BAAA1C1ECB690079FA93 /* ToDoItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToDoItem.h; sourceTree = "<group>"; };
 		B275BAAB1C1ECB690079FA93 /* ToDoItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToDoItem.m; sourceTree = "<group>"; };
+		B275BAB01C2162A40079FA93 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		B275BAB51C227C430079FA93 /* DBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBManager.h; sourceTree = "<group>"; };
+		B275BAB61C227C430079FA93 /* DBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBManager.m; sourceTree = "<group>"; };
+		B275BAB71C227C430079FA93 /* sampledb.sql */ = {isa = PBXFileReference; lastKnownFileType = file; path = sampledb.sql; sourceTree = "<group>"; };
+		B275BABA1C22A3000079FA93 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		B275BABC1C22A3060079FA93 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		B275BABE1C22A30E0079FA93 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		B275BAC01C22A3230079FA93 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		B2F302F91C1E96B9007001B8 /* What To Do.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "What To Do.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2F302FD1C1E96B9007001B8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B2F302FF1C1E96B9007001B8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -56,6 +71,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B275BABF1C22A30E0079FA93 /* Foundation.framework in Frameworks */,
+				B275BABD1C22A3060079FA93 /* UIKit.framework in Frameworks */,
+				B275BABB1C22A3000079FA93 /* CoreGraphics.framework in Frameworks */,
+				B275BAC11C22A3230079FA93 /* libsqlite3.dylib in Frameworks */,
+				B275BAB11C2162A40079FA93 /* libsqlite3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +85,11 @@
 		B2F302F01C1E96B9007001B8 = {
 			isa = PBXGroup;
 			children = (
+				B275BAC01C22A3230079FA93 /* libsqlite3.dylib */,
+				B275BABE1C22A30E0079FA93 /* Foundation.framework */,
+				B275BABC1C22A3060079FA93 /* UIKit.framework */,
+				B275BABA1C22A3000079FA93 /* CoreGraphics.framework */,
+				B275BAB01C2162A40079FA93 /* libsqlite3.tbd */,
 				B2F302FB1C1E96B9007001B8 /* What To Do */,
 				B2F302FA1C1E96B9007001B8 /* Products */,
 			);
@@ -81,6 +106,9 @@
 		B2F302FB1C1E96B9007001B8 /* What To Do */ = {
 			isa = PBXGroup;
 			children = (
+				B275BAB51C227C430079FA93 /* DBManager.h */,
+				B275BAB61C227C430079FA93 /* DBManager.m */,
+				B275BAB71C227C430079FA93 /* sampledb.sql */,
 				B2F303131C1E9D24007001B8 /* Images */,
 				B2F302FF1C1E96B9007001B8 /* AppDelegate.h */,
 				B2F303001C1E96B9007001B8 /* AppDelegate.m */,
@@ -184,6 +212,7 @@
 				B2F3030C1C1E96B9007001B8 /* LaunchScreen.storyboard in Resources */,
 				B2F3031D1C1E9D32007001B8 /* Icon@2x.png in Resources */,
 				B2F303191C1E9D32007001B8 /* Icon-iOS7@2x.png in Resources */,
+				B275BAB91C227C430079FA93 /* sampledb.sql in Resources */,
 				B2F3031F1C1E9DF7007001B8 /* bac.jpg in Resources */,
 				B2F303091C1E96B9007001B8 /* Assets.xcassets in Resources */,
 				B2F3031B1C1E9D32007001B8 /* Icon-Small@2x.png in Resources */,
@@ -201,6 +230,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B275BAB81C227C430079FA93 /* DBManager.m in Sources */,
 				B275BAAC1C1ECB690079FA93 /* ToDoItem.m in Sources */,
 				B2F303041C1E96B9007001B8 /* ViewController.m in Sources */,
 				B2F303011C1E96B9007001B8 /* AppDelegate.m in Sources */,
@@ -318,8 +348,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				INFOPLIST_FILE = "What To Do/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.columbus.What-To-Do";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -330,8 +361,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				INFOPLIST_FILE = "What To Do/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.columbus.What-To-Do";
 				PRODUCT_NAME = "$(TARGET_NAME)";

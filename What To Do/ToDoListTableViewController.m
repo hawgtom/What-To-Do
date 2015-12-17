@@ -7,70 +7,78 @@
 //
 
 #import "ToDoListTableViewController.h"
-#import "ToDoItem.h"
-#import "AddToDoItemViewController.h"
+#import "DBManager.h"
 @interface ToDoListTableViewController ()
-@property NSMutableArray *toDoItems;
+@property (nonatomic, strong) DBManager *dbManager;
+-(void)loadData;
+@property (nonatomic, strong) NSArray *arrPeopleInfo;
 @end
 
 @implementation ToDoListTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.toDoItems = [[NSMutableArray alloc] init];
+    self.list.delegate = self;
+    self.list.dataSource = self;
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
+    self.dbManager = [[DBManager alloc] initWithDatabaseFilename:@"sampledb.sql"];
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    // Load the data.
+    [self loadData];
+
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-- (IBAction)unwindToList:(UIStoryboardSegue *)segue {
-    AddToDoItemViewController *source = [segue sourceViewController];
+
+-(void)loadData{
+// Form the query.
+NSString *query = @"select * from todo";
+    NSLog(@"Hai");
+// Get the results.
+if (self.arrPeopleInfo != nil) {
+    self.arrPeopleInfo = nil;
+}
+self.arrPeopleInfo = [[NSArray alloc] initWithArray:[self.dbManager loadDataFromDB:query]];
+// Reload the table view.
+[self.list reloadData];
+}
+
+
+-(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    ToDoItem *item = source.toDoItem;
-    
-    if (item != nil) {
-        [self.toDoItems addObject:item];
-        [self.tableView reloadData];
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        // Delete the selected record.
+        // Find the record ID.
+        int recordIDToDelete = [[[self.arrPeopleInfo objectAtIndex:indexPath.row] objectAtIndex:0] intValue];
+        NSLog(@"ID : %d",recordIDToDelete);
+        // Prepare the query.
+        NSString *query = [NSString stringWithFormat:@"delete from todo where id=%d", recordIDToDelete];
         
+        // Execute the query.
+        [self.dbManager executeQuery:query];
+        
+        // Reload the table view.
+        [self loadData];
     }
 }
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+-(void)removeobject
 {
-    // Remove the row from data model
-    [self.toDoItems removeObjectAtIndex:indexPath.row];
-    [self.tableView reloadData];
 }
 #pragma mark - Table view data source
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [self.toDoItems count];
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return self.arrPeopleInfo.count;
 }
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ListPrototypeCell" forIndexPath:indexPath];
+    NSInteger indextask = [self.dbManager.arrColumnNames indexOfObject:@"task"];
+    NSInteger indexdate = [self.dbManager.arrColumnNames indexOfObject:@"date"];
+    cell.textLabel.text = [NSString stringWithFormat:@"%@", [[self.arrPeopleInfo objectAtIndex:indexPath.row] objectAtIndex:indextask]];
     
-    ToDoItem *toDoItem = [self.toDoItems objectAtIndex:indexPath.row];
-    UILabel *item = (UILabel *)[cell viewWithTag:1];
-    item.text = toDoItem.itemName;
-    UILabel *targetDate = (UILabel *)[cell viewWithTag:2];
-    
-    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
-    [dateFormat setDateFormat:@"cccc, MMM d, hh:mm aa"];
-    NSString *prettyVersion = [dateFormat stringFromDate:toDoItem.TargetDate];
-
-    targetDate.text = prettyVersion;
-
-     if (toDoItem.completed) {
-        cell.accessoryType = UITableViewCellAccessoryCheckmark;
-        
-    } else {
-        
-        cell.accessoryType = UITableViewCellAccessoryNone;
-        
-    }
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"Age: %@", [[self.arrPeopleInfo objectAtIndex:indexPath.row] objectAtIndex:indexdate]];
 
     return cell;
 }
@@ -95,18 +103,15 @@
     
 }
  */
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath
-                                                                    
-                                                                    *)indexPath {
-    
-    [tableView deselectRowAtIndexPath:indexPath animated:NO];
-    
-    ToDoItem *tappedItem = [self.toDoItems objectAtIndex:indexPath.row];
-    
-    tappedItem.completed = !tappedItem.completed;
-    
-    [tableView reloadRowsAtIndexPaths:@[indexPath]    
-                     withRowAnimation:UITableViewRowAnimationNone];
-    
+
+- (IBAction)add:(id)sender {
+    [self performSegueWithIdentifier:@"addsegue" sender:self];
 }
+
+-(void)editingInfoWasFinished{
+    // Reload the data.
+    NSLog(@"Dudu");
+    [self loadData];
+}
+
 @end

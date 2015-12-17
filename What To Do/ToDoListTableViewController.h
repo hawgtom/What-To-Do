@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface ToDoListTableViewController : UITableViewController
-
+#import "AddToDoItemViewController.h"
+@interface ToDoListTableViewController : UITableViewController<UITableViewDelegate, UITableViewDataSource,EditInfoViewControllerDelegate>
+- (IBAction)add:(id)sender;
+@property (weak, nonatomic) IBOutlet UITableView *list;
+-(void)viewDidLoad;
 @end

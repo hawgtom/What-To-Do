@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface ViewController : UIViewController<UITextFieldDelegate>
-@property (strong, nonatomic) IBOutlet UITextField *addtodo;
+#import "ToDoListTableViewController.h"
+@interface ViewController : UIViewController<UITableViewDelegate, UITableViewDataSource, EditInfoViewControllerDelegate>
+@property (weak, nonatomic) IBOutlet UITableView *list;
+- (IBAction)add:(id)sender;
 
 @end
 

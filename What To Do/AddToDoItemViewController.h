@@ -8,6 +8,18 @@
 
 #import <UIKit/UIKit.h>
 #import "ToDoItem.h"
+@protocol EditInfoViewControllerDelegate
+
+-(void)editingInfoWasFinished;
+
+@end
+
+
 @interface AddToDoItemViewController : UIViewController<UITextFieldDelegate>
-@property ToDoItem *toDoItem;
+@property (retain, nonatomic) IBOutlet UITextField *textField;
+- (IBAction)save:(id)sender;
+
+@property (nonatomic, strong) id<EditInfoViewControllerDelegate> delegate;
+@property (retain, nonatomic) IBOutlet UIDatePicker *datePicker;
+
 @end
